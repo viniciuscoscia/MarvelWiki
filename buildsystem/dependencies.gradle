@@ -1,0 +1,14 @@
+ext {
+    dependenciesVersion = [
+            retrofit : '2.5.0',
+            dagger2: '2.22.1'
+    ]
+
+    libs = [
+            converterGson : "com.squareup.retrofit2:converter-gson:$dependenciesVersion.retrofit",
+            dagger2: "com.google.dagger:dagger:$dependenciesVersion.dagger2",
+            dagger2compiler: "com.google.dagger:dagger-compiler:$dependenciesVersion.dagger2",
+            kotlin: "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version",
+            retrofit: "com.squareup.retrofit2:retrofit:$dependenciesVersion.retrofit"
+    ]
+}

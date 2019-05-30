@@ -1,14 +1,36 @@
 ext {
     dependenciesVersion = [
-            retrofit : '2.5.0',
-            dagger2: '2.22.1'
+            androidxCore:       '1.0.2',
+            constraintLayout:   '1.1.3',
+            dagger2:            '2.22.1',
+            espresso:           '3.1.1',
+            javaxAnnotation:    '1.0',
+            javaxInject:        '1',
+            junit:              '4.12',
+            recyclerView:       '1.0.0',
+            retrofit :          '2.5.0',
+            testRunner:         '1.1.1'
     ]
 
     libs = [
-            converterGson : "com.squareup.retrofit2:converter-gson:$dependenciesVersion.retrofit",
-            dagger2: "com.google.dagger:dagger:$dependenciesVersion.dagger2",
-            dagger2compiler: "com.google.dagger:dagger-compiler:$dependenciesVersion.dagger2",
-            kotlin: "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version",
-            retrofit: "com.squareup.retrofit2:retrofit:$dependenciesVersion.retrofit"
+            annotations:                "androidx.annotation:annotation:$dependenciesVersion.androidxCore",
+            appCompat:                  "androidx.appcompat:appcompat:$dependenciesVersion.androidxCore",
+            coreKt:                     "androidx.core:core-ktx:$dependenciesVersion.androidxCore",
+            constraintLayout:           "androidx.constraintlayout:constraintlayout:$dependenciesVersion.constraintLayout",
+            converterGson:              "com.squareup.retrofit2:converter-gson:$dependenciesVersion.retrofit",
+            dagger2:                    "com.google.dagger:dagger:$dependenciesVersion.dagger2",
+            dagger2compiler:            "com.google.dagger:dagger-compiler:$dependenciesVersion.dagger2",
+            dagger2android:             "com.google.dagger:dagger-android:$dependenciesVersion.dagger2",
+            dagger2androidProcessor:    "com.google.dagger:dagger-android-processor:$dependenciesVersion.dagger2",
+            espresso:                   "androidx.test.espresso:espresso-core:$dependenciesVersion.espresso",
+            javaxAnnotation:            "javax.annotation:jsr250-api:$dependenciesVersion.javaxAnnotation",
+            javaxInject:                "javax.inject:javax.inject:$dependenciesVersion.javaxInject",
+            junit:                      "junit:junit:$dependenciesVersion.junit",
+            kotlin:                     "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version",
+            recyclerView:               "androidx.recyclerview:recyclerview:$dependenciesVersion.recyclerView",
+            retrofit:                   "com.squareup.retrofit2:retrofit:$dependenciesVersion.retrofit",
+            testRunner:                 "androidx.test:runner:$dependenciesVersion.testRunner"
     ]
+
+//    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }

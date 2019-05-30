@@ -1,1 +1,1 @@
-include ':app', ':marvelRepo'
+include ':app'

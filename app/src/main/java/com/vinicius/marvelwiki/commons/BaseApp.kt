@@ -1,12 +1,19 @@
 package com.vinicius.marvelwiki.commons
 
+import android.app.Activity
 import android.app.Application
-import com.vinicius.marvelwiki.di.application.ApplicationComponent
-import com.vinicius.marvelwiki.di.application.DaggerApplicationComponent
+import com.vinicius.marvelwiki.di.DaggerApplicationComponent
+import dagger.android.AndroidInjector
+import dagger.android.DispatchingAndroidInjector
+import dagger.android.HasActivityInjector
+import javax.inject.Inject
 
-class BaseApp: Application() {
+class BaseApp: Application(), HasActivityInjector {
 
-    lateinit var component: ApplicationComponent
+    @Inject
+    lateinit var androidInjector: DispatchingAndroidInjector<Activity>
+
+    override fun activityInjector(): AndroidInjector<Activity> = androidInjector
 
     override fun onCreate() {
         super.onCreate()
@@ -15,9 +22,10 @@ class BaseApp: Application() {
     }
 
     private fun setupDagger() {
-        component = DaggerApplicationComponent
+        DaggerApplicationComponent
             .builder()
+            .application(this)
             .build()
-        component.inject(this)
+            .inject(this)
     }
 }

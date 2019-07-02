@@ -1,4 +1,4 @@
-package com.vinicius.marvelwiki.di.network
+package com.vinicius.marvelwiki.di.module
 
 import com.vinicius.marvelwiki.util.Constants
 import com.vinicius.marvelwiki.api.IMarvelAPI

@@ -1,8 +1,8 @@
 apply plugin: 'kotlin'
 
 dependencies {
-    implementation libs.kotlin
     implementation libs.rxJava
     implementation libs.rxKotlin
+    implementation libs.kotlin
 }
 

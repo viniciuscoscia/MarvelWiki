@@ -4,8 +4,10 @@ dependencies {
     implementation project(':data')
     implementation project(':utils')
 
-    implementation libs.kotlin
     implementation libs.rxJava
+    implementation libs.kotlin
     implementation libs.rxKotlin
     implementation libs.retrofit
+    implementation libs.javaxInject
+    implementation libs.converterGson
 }

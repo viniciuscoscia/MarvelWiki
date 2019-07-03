@@ -3,6 +3,7 @@ package br.com.remote.service
 import br.com.domain.model.CharactersRequest
 import br.com.utils.Constants
 import br.com.utils.toMD5
+import io.reactivex.Observable
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query
@@ -23,7 +24,7 @@ interface IMarvelAPI {
         @Query("ts") ts: String,
         @Query("apikey") apikey: String,
         @Query("hash") hash: String
-    ): Call<CharactersRequest>
+    ): Observable<CharactersRequest>
 
     companion object {
         fun getHash() = (getTimeInMillis() + Constants.PRIVATE_KEY + Constants.PUBLIC_KEY).toMD5()

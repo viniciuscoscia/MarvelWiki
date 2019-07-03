@@ -21,16 +21,5 @@ class MainActivity : BaseActivity() {
         setContentView(R.layout.activity_main)
         AndroidInjection.inject(this)
 
-        marvelApi.getAllCharacters(IMarvelAPI.getTimeInMillis(), br.com.utils.Constants.PUBLIC_KEY, IMarvelAPI.getHash())
-                .enqueue(object: Callback<CharactersRequest>{
-                    override fun onFailure(call: Call<CharactersRequest>, t: Throwable) {
-                        print(call)
-                        print(t.toString())
-                    }
-
-                    override fun onResponse(call: Call<CharactersRequest>, response: Response<CharactersRequest>) {
-                        print("Deu bom")
-                    }
-                } )
     }
 }

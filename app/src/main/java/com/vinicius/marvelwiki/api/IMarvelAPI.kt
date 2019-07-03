@@ -5,7 +5,6 @@ import com.vinicius.marvelwiki.util.Constants
 import com.vinicius.marvelwiki.util.toMD5
 import retrofit2.Call
 import retrofit2.http.GET
-import retrofit2.http.Path
 import retrofit2.http.Query
 import java.util.*
 
@@ -27,8 +26,6 @@ interface IMarvelAPI {
     ): Call<CharactersRequest>
 
     companion object {
-//        fun getUrlParams() = "&ts=${getTimeInMillis()}&apikey=${Constants.PUBLIC_KEY}&hash=${getHash()}"
-
         fun getHash() = (getTimeInMillis() + Constants.PRIVATE_KEY + Constants.PUBLIC_KEY).toMD5()
 
         fun getTimeInMillis(): String {

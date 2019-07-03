@@ -47,4 +47,8 @@ dependencies {
     annotationProcessor libs.dagger2androidProcessor
     compileOnly libs.javaxAnnotation
     implementation libs.javaxInject
+
+    //RX Java
+    implementation libs.rxJava
+    implementation libs.rxKotlin
 }

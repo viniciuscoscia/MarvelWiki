@@ -23,29 +23,15 @@ class MainActivity : BaseActivity() {
         AndroidInjection.inject(this)
 
         marvelApi.getAllCharacters(IMarvelAPI.getTimeInMillis(), Constants.PUBLIC_KEY, IMarvelAPI.getHash())
-            .enqueue(object: Callback<CharactersRequest>{
-                override fun onFailure(call: Call<CharactersRequest>, t: Throwable) {
-                    print(call)
-                    print(t.toString())
-                }
+                .enqueue(object: Callback<CharactersRequest>{
+                    override fun onFailure(call: Call<CharactersRequest>, t: Throwable) {
+                        print(call)
+                        print(t.toString())
+                    }
 
-                override fun onResponse(call: Call<CharactersRequest>, response: Response<CharactersRequest>) {
-                    print("Deu bom")
-                }
-            } )
-
-//        marvelApi.getAllCharacters(IMarvelAPI.getUrlParams())
-//        component.getApi()
-//            .getAllCharacters(IMarvelAPI.getTimeInMillis(), Constants.PUBLIC_KEY, IMarvelAPI.getHash())
-//            .enqueue(object: Callback<CharactersRequest>{
-//                override fun onFailure(call: Call<CharactersRequest>, t: Throwable) {
-//                    print(call)
-//                    print(t.toString())
-//                }
-//
-//                override fun onResponse(call: Call<CharactersRequest>, response: Response<CharactersRequest>) {
-//                    print("Deu bom")
-//                }
-//            } )
+                    override fun onResponse(call: Call<CharactersRequest>, response: Response<CharactersRequest>) {
+                        print("Deu bom")
+                    }
+                } )
     }
 }

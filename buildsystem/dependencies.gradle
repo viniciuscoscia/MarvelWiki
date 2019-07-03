@@ -7,8 +7,11 @@ ext {
             javaxAnnotation:    '1.0',
             javaxInject:        '1',
             junit:              '4.12',
+            lifecycle:          '2.0.0',
             recyclerView:       '1.0.0',
             retrofit :          '2.5.0',
+            rxJava:             '2.2.9',
+            rxKotlin:           '2.3.0',
             testRunner:         '1.1.1'
     ]
 
@@ -21,16 +24,19 @@ ext {
             dagger2:                    "com.google.dagger:dagger:$dependenciesVersion.dagger2",
             dagger2compiler:            "com.google.dagger:dagger-compiler:$dependenciesVersion.dagger2",
             dagger2android:             "com.google.dagger:dagger-android:$dependenciesVersion.dagger2",
+            dagger2androidSupport:      "com.google.dagger:dagger-android-support:$dependenciesVersion.dagger2",
             dagger2androidProcessor:    "com.google.dagger:dagger-android-processor:$dependenciesVersion.dagger2",
             espresso:                   "androidx.test.espresso:espresso-core:$dependenciesVersion.espresso",
             javaxAnnotation:            "javax.annotation:jsr250-api:$dependenciesVersion.javaxAnnotation",
             javaxInject:                "javax.inject:javax.inject:$dependenciesVersion.javaxInject",
             junit:                      "junit:junit:$dependenciesVersion.junit",
             kotlin:                     "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version",
+            lifecycle:                  "androidx.lifecycle:lifecycle-extensions:$dependenciesVersion.lifecycle",
             recyclerView:               "androidx.recyclerview:recyclerview:$dependenciesVersion.recyclerView",
             retrofit:                   "com.squareup.retrofit2:retrofit:$dependenciesVersion.retrofit",
+            retrofitAdapter:            "com.squareup.retrofit2:adapter-rxjava2:$dependenciesVersion.retrofit",
+            rxJava:                     "io.reactivex.rxjava2:rxjava:$dependenciesVersion.rxJava",
+            rxKotlin:                   "io.reactivex.rxjava2:rxkotlin:$dependenciesVersion.rxKotlin",
             testRunner:                 "androidx.test:runner:$dependenciesVersion.testRunner"
     ]
-
-//    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }

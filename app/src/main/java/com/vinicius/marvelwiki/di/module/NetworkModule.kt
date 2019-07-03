@@ -1,7 +1,7 @@
 package com.vinicius.marvelwiki.di.module
 
-import com.vinicius.marvelwiki.util.Constants
-import com.vinicius.marvelwiki.api.IMarvelAPI
+import br.com.remote.service.IMarvelAPI
+import br.com.utils.Constants
 import dagger.Module
 import dagger.Provides
 import retrofit2.Retrofit

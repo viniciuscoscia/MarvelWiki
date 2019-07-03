@@ -1,0 +1,11 @@
+apply plugin: 'kotlin'
+
+dependencies {
+    implementation project(':data')
+    implementation project(':utils')
+
+    implementation libs.kotlin
+    implementation libs.rxJava
+    implementation libs.rxKotlin
+    implementation libs.retrofit
+}

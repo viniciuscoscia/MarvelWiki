@@ -1,4 +1,4 @@
-package com.vinicius.marvelwiki.util
+package br.com.utils
 
 import java.math.BigInteger
 import java.security.MessageDigest

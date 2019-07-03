@@ -1,4 +1,4 @@
-package com.vinicius.marvelwiki.util
+package br.com.utils
 
 class Constants {
 

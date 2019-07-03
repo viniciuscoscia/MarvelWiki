@@ -1,10 +1,10 @@
 package com.vinicius.marvelwiki.ui.acitivity.main
 
 import android.os.Bundle
+import br.com.domain.model.CharactersRequest
 import com.vinicius.marvelwiki.R
 import com.vinicius.marvelwiki.api.IMarvelAPI
 import com.vinicius.marvelwiki.commons.BaseActivity
-import com.vinicius.marvelwiki.models.CharactersRequest
 import com.vinicius.marvelwiki.util.Constants
 import dagger.android.AndroidInjection
 import retrofit2.Call

@@ -1,4 +1,4 @@
-package com.vinicius.marvelwiki.models
+package br.com.domain.model
 
 class CharactersRequest (
     val code: Byte,

@@ -1,6 +1,6 @@
 package com.vinicius.marvelwiki.api
 
-import com.vinicius.marvelwiki.models.CharactersRequest
+import br.com.domain.model.CharactersRequest
 import com.vinicius.marvelwiki.util.Constants
 import com.vinicius.marvelwiki.util.toMD5
 import retrofit2.Call

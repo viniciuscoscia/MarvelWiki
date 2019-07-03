@@ -24,7 +24,8 @@ android {
 dependencies {
     def libs = rootProject.ext.libs
 
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':data')
+    implementation project(':domain')
 
     implementation libs.kotlin
     implementation libs.appCompat

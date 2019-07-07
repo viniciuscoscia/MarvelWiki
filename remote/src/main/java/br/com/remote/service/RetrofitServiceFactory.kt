@@ -2,6 +2,7 @@ package br.com.remote.service
 
 import br.com.utils.Constants
 import retrofit2.Retrofit
+import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitServiceFactory {
@@ -9,6 +10,7 @@ object RetrofitServiceFactory {
         return Retrofit.Builder()
             .baseUrl(Constants.BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
+            .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
             .build()
             .create(IMarvelAPI::class.java)
     }

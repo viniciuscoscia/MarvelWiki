@@ -15,10 +15,10 @@ class Data(
     val limit: Short,
     val total: Short,
     val count: Short,
-    val results: List<Result>
+    val results: List<Character>
 )
 
-class Result(
+class Character(
     val id: Int,
     val name: String,
     val description: String,

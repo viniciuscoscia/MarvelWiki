@@ -10,11 +10,11 @@ ext {
             lifecycle:          '2.0.0',
             recyclerView:       '1.0.0',
             retrofit :          '2.6.0',
+            rxAndroid:          '2.1.1',
             rxJava:             '2.2.9',
             rxKotlin:           '2.3.0',
             testRunner:         '1.1.1'
     ]
-
     libs = [
             annotations:                "androidx.annotation:annotation:$dependenciesVersion.androidxCore",
             appCompat:                  "androidx.appcompat:appcompat:$dependenciesVersion.androidxCore",
@@ -35,8 +35,11 @@ ext {
             recyclerView:               "androidx.recyclerview:recyclerview:$dependenciesVersion.recyclerView",
             retrofit:                   "com.squareup.retrofit2:retrofit:$dependenciesVersion.retrofit",
             retrofitAdapter:            "com.squareup.retrofit2:adapter-rxjava2:$dependenciesVersion.retrofit",
+            retrofitRxJavaAdapter:      "com.squareup.retrofit2:adapter-rxjava:$dependenciesVersion.retrofit",
+            rxAndroid:                  "io.reactivex.rxjava2:rxandroid:$dependenciesVersion.rxAndroid",
             rxJava:                     "io.reactivex.rxjava2:rxjava:$dependenciesVersion.rxJava",
             rxKotlin:                   "io.reactivex.rxjava2:rxkotlin:$dependenciesVersion.rxKotlin",
             testRunner:                 "androidx.test:runner:$dependenciesVersion.testRunner"
     ]
+
 }

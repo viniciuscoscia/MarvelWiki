@@ -35,7 +35,6 @@ ext {
             recyclerView:               "androidx.recyclerview:recyclerview:$dependenciesVersion.recyclerView",
             retrofit:                   "com.squareup.retrofit2:retrofit:$dependenciesVersion.retrofit",
             retrofitAdapter:            "com.squareup.retrofit2:adapter-rxjava2:$dependenciesVersion.retrofit",
-            retrofitRxJavaAdapter:      "com.squareup.retrofit2:adapter-rxjava:$dependenciesVersion.retrofit",
             rxAndroid:                  "io.reactivex.rxjava2:rxandroid:$dependenciesVersion.rxAndroid",
             rxJava:                     "io.reactivex.rxjava2:rxjava:$dependenciesVersion.rxJava",
             rxKotlin:                   "io.reactivex.rxjava2:rxkotlin:$dependenciesVersion.rxKotlin",

@@ -10,5 +10,5 @@ dependencies {
     implementation libs.retrofit
     implementation libs.javaxInject
     implementation libs.converterGson
-    implementation libs.retrofitRxJavaAdapter
+    implementation libs.retrofitAdapter
 }

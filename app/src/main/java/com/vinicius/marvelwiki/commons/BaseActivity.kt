@@ -1,12 +1,16 @@
 package com.vinicius.marvelwiki.commons
 
-import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.vinicius.marvelwiki.viewModel.ViewModelFactory
+import javax.inject.Inject
 
 abstract class BaseActivity : AppCompatActivity() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
+    @Inject
+    lateinit var viewModelFactory: ViewModelFactory
 
+    override fun onStop() {
+        super.onStop()
+        DisposableManager.dispose()
+    }
 }

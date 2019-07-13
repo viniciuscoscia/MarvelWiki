@@ -2,37 +2,36 @@ package com.vinicius.marvelwiki.ui.acitivity.main
 
 import android.os.Bundle
 import android.util.Log
-import br.com.remote.service.IMarvelAPI
-import br.com.utils.Constants
+import androidx.lifecycle.ViewModelProviders
 import com.vinicius.marvelwiki.R
 import com.vinicius.marvelwiki.commons.BaseActivity
+import com.vinicius.marvelwiki.viewModel.MainViewModel
 import dagger.android.AndroidInjection
-import io.reactivex.Observable
-import io.reactivex.Observer
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.disposables.CompositeDisposable
-import io.reactivex.disposables.Disposable
-import io.reactivex.functions.Consumer
-import io.reactivex.schedulers.Schedulers
-import javax.inject.Inject
 
 class MainActivity : BaseActivity() {
 
-    @Inject
-    lateinit var api: IMarvelAPI
-    
+    lateinit var viewModel: MainViewModel
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         AndroidInjection.inject(this)
+        initViewModel()
+        searchCharacters()
+    }
 
-        val a = api.getAllCharacters(IMarvelAPI.getTimeInMillis(), Constants.PUBLIC_KEY, IMarvelAPI.getHash())
-            .subscribeOn(Schedulers.io())
-            .observeOn(AndroidSchedulers.mainThread())
+    private fun searchCharacters() {
+        viewModel.fetchCharacters()
+        viewModel.getCharacterList().observe(this, androidx.lifecycle.Observer { personagens ->
+            personagens.forEach { personagem ->
+                Log.d("Personagem", personagem.name)
+            }
+        })
+    }
 
-        val b =
-            a.subscribe { charRequest -> Log.d("TEXTO", (charRequest.data.results[1].name))}
-
+    private fun initViewModel() {
+        viewModel = ViewModelProviders.of(this, viewModelFactory)
+            .get(MainViewModel::class.java)
     }
 
 }

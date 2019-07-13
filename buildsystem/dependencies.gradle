@@ -38,7 +38,8 @@ ext {
             rxAndroid:                  "io.reactivex.rxjava2:rxandroid:$dependenciesVersion.rxAndroid",
             rxJava:                     "io.reactivex.rxjava2:rxjava:$dependenciesVersion.rxJava",
             rxKotlin:                   "io.reactivex.rxjava2:rxkotlin:$dependenciesVersion.rxKotlin",
-            testRunner:                 "androidx.test:runner:$dependenciesVersion.testRunner"
+            testRunner:                 "androidx.test:runner:$dependenciesVersion.testRunner",
+            viewModel:                  "androidx.lifecycle:lifecycle-viewmodel:$dependenciesVersion.lifecycle"
     ]
 
 }

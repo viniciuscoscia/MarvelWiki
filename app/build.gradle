@@ -55,4 +55,7 @@ dependencies {
     implementation libs.rxJava
     implementation libs.rxKotlin
     implementation libs.rxAndroid
+
+    implementation libs.viewModel
+    implementation libs.lifecycle
 }

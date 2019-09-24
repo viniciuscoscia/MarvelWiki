@@ -1,4 +1,4 @@
-package com.vinicius.marvelwiki.ui.acitivity.main
+package com.vinicius.marvelwiki.ui.activity.main
 
 import android.content.Context
 import android.view.LayoutInflater

@@ -2,7 +2,7 @@ package com.vinicius.marvelwiki.di.module
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.vinicius.marvelwiki.ui.acitivity.main.MainActivity
+import com.vinicius.marvelwiki.ui.activity.main.MainActivity
 import com.vinicius.marvelwiki.viewModel.MainViewModel
 import com.vinicius.marvelwiki.viewModel.ViewModelFactory
 import dagger.Binds

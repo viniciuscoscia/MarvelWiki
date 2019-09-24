@@ -1,9 +1,10 @@
-package com.vinicius.marvelwiki.ui.acitivity.main
+package com.vinicius.marvelwiki.ui.activity.main
 
 import android.os.Bundle
 import android.util.Log
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.GridLayoutManager
+import com.vinicius.marvelwiki.BuildConfig
 import com.vinicius.marvelwiki.R
 import com.vinicius.marvelwiki.commons.BaseActivity
 import com.vinicius.marvelwiki.commons.DisposableManager
@@ -34,9 +35,9 @@ class MainActivity : BaseActivity() {
     private fun searchCharacters() {
         val disposable = viewModel
             .getAllCharacters()
-            .subscribe ({ characters ->
+            .subscribe({ characters ->
                 myAdapter.setCharacters(characters)
-            },{ error ->
+            }, { error ->
                 Log.e(this::javaClass.name, error.message)
             })
         DisposableManager.add(disposable)

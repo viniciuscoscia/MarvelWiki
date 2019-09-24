@@ -9,6 +9,7 @@ import javax.inject.Inject
 
 class RemoteImpl @Inject constructor(private val service: IMarvelAPI): Remote{
     override fun getAllCharacters(): Observable<CharactersRequest> {
-        return service.getAllCharacters(IMarvelAPI.getTimeInMillis(), Constants.PUBLIC_KEY, IMarvelAPI.getHash())
+        val time = IMarvelAPI.getTimeInMillis()
+        return service.getAllCharacters(time, Constants.PUBLIC_KEY, IMarvelAPI.getHash(time))
     }
 }

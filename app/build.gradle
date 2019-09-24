@@ -37,6 +37,10 @@ dependencies {
     androidTestImplementation libs.testRunner
     androidTestImplementation libs.espresso
 
+    implementation libs.recyclerView
+    implementation libs.glide
+    annotationProcessor libs.glideCompiler
+
     //Retrofit
     implementation libs.converterGson
     implementation libs.retrofit

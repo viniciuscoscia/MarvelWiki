@@ -27,7 +27,7 @@ interface IMarvelAPI {
     ): Observable<CharactersRequest>
 
     companion object {
-        fun getHash() = (getTimeInMillis() + Constants.PRIVATE_KEY + Constants.PUBLIC_KEY).toMD5()
+        fun getHash(time: String) = (time + Constants.PRIVATE_KEY + Constants.PUBLIC_KEY).toMD5()
 
         fun getTimeInMillis(): String {
             return Calendar.getInstance().timeInMillis.toString()

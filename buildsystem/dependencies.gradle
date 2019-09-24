@@ -1,19 +1,20 @@
 ext {
     dependenciesVersion = [
-            androidxCore:       '1.0.2',
+            androidxCore:       '1.1.0',
             constraintLayout:   '1.1.3',
             dagger2:            '2.23.2',
-            espresso:           '3.1.1',
+            espresso:           '3.2.0',
+            glide:              '4.10.0',
             javaxAnnotation:    '1.0',
             javaxInject:        '1',
             junit:              '4.12',
-            lifecycle:          '2.0.0',
+            lifecycle:          '2.1.0',
             recyclerView:       '1.0.0',
-            retrofit :          '2.6.0',
+            retrofit :          '2.6.1',
             rxAndroid:          '2.1.1',
             rxJava:             '2.2.9',
             rxKotlin:           '2.3.0',
-            testRunner:         '1.1.1'
+            testRunner:         '1.2.0'
     ]
     libs = [
             annotations:                "androidx.annotation:annotation:$dependenciesVersion.androidxCore",
@@ -27,6 +28,8 @@ ext {
             dagger2androidSupport:      "com.google.dagger:dagger-android-support:$dependenciesVersion.dagger2",
             dagger2androidProcessor:    "com.google.dagger:dagger-android-processor:$dependenciesVersion.dagger2",
             espresso:                   "androidx.test.espresso:espresso-core:$dependenciesVersion.espresso",
+            glide:                      "com.github.bumptech.glide:glide:$dependenciesVersion.glide",
+            glideCompiler:              "com.github.bumptech.glide:compiler:$dependenciesVersion.glide",
             javaxAnnotation:            "javax.annotation:jsr250-api:$dependenciesVersion.javaxAnnotation",
             javaxInject:                "javax.inject:javax.inject:$dependenciesVersion.javaxInject",
             junit:                      "junit:junit:$dependenciesVersion.junit",

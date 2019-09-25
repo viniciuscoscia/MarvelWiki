@@ -4,8 +4,8 @@ import android.os.Bundle
 import android.util.Log
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.GridLayoutManager
-import com.vinicius.marvelwiki.BuildConfig
 import com.vinicius.marvelwiki.R
+import com.vinicius.marvelwiki.Utils
 import com.vinicius.marvelwiki.commons.BaseActivity
 import com.vinicius.marvelwiki.commons.DisposableManager
 import com.vinicius.marvelwiki.viewModel.MainViewModel
@@ -29,7 +29,7 @@ class MainActivity : BaseActivity() {
     private fun setupRecyclerView() = with(mainRecyclerView) {
         adapter = myAdapter
         setHasFixedSize(true)
-        layoutManager = GridLayoutManager(this@MainActivity, 2)
+        layoutManager = GridLayoutManager(this@MainActivity, Utils.calculateBestSpanCount(windowManager, 400))
     }
 
     private fun searchCharacters() {

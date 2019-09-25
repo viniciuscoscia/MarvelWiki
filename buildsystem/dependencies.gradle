@@ -1,6 +1,7 @@
 ext {
     dependenciesVersion = [
             androidxCore:       '1.1.0',
+            cardView:           '1.0.0',
             constraintLayout:   '1.1.3',
             dagger2:            '2.23.2',
             espresso:           '3.2.0',
@@ -19,6 +20,7 @@ ext {
     libs = [
             annotations:                "androidx.annotation:annotation:$dependenciesVersion.androidxCore",
             appCompat:                  "androidx.appcompat:appcompat:$dependenciesVersion.androidxCore",
+            cardView:                   "androidx.cardview:cardview:$dependenciesVersion.cardView",
             coreKt:                     "androidx.core:core-ktx:$dependenciesVersion.androidxCore",
             constraintLayout:           "androidx.constraintlayout:constraintlayout:$dependenciesVersion.constraintLayout",
             converterGson:              "com.squareup.retrofit2:converter-gson:$dependenciesVersion.retrofit",

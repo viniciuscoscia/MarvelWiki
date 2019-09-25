@@ -64,4 +64,5 @@ dependencies {
 
     implementation libs.viewModel
     implementation libs.lifecycle
+    implementation libs.cardView
 }

@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph"
-        app:startDestination="@id/dataContainerFragment">
-
+        app:startDestination="@id/charactersFragment">
     <fragment
-            android:id="@+id/dataContainerFragment"
-            android:name="com.vinicius.marvelwiki.ui.fragment.DataContainerFragment"
-            android:label="DataContainerFragment" />
+            android:id="@+id/charactersFragment"
+            android:name="com.vinicius.marvelwiki.ui.fragment.characters.CharactersFragment"
+            android:label="CharactersFragment" />
 </navigation>

@@ -65,4 +65,9 @@ dependencies {
     implementation libs.viewModel
     implementation libs.lifecycle
     implementation libs.cardView
+
+    //Navigation
+    implementation libs.navigationFragment
+    implementation libs.navigationUi
+
 }

@@ -15,32 +15,26 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : BaseActivity() {
 
     lateinit var viewModel: MainViewModel
-    private var myAdapter = CharacterAdapter(this)
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         AndroidInjection.inject(this)
         initViewModel()
-        setupRecyclerView()
         searchCharacters()
     }
 
-    private fun setupRecyclerView() = with(mainRecyclerView) {
-        adapter = myAdapter
-        setHasFixedSize(true)
-        layoutManager = GridLayoutManager(this@MainActivity, Utils.calculateBestSpanCount(windowManager, 400))
-    }
 
     private fun searchCharacters() {
-        val disposable = viewModel
-            .getAllCharacters()
-            .subscribe({ characters ->
-                myAdapter.setCharacters(characters)
-            }, { error ->
-                Log.e(this::javaClass.name, error.message)
-            })
-        DisposableManager.add(disposable)
+//        val disposable = viewModel
+//            .getAllCharacters()
+//            .subscribe({ characters ->
+//                myAdapter.setCharacters(characters)
+//            }, { error ->
+//                Log.e(this::javaClass.name, error.message)
+//            })
+//        DisposableManager.add(disposable)
     }
 
     private fun initViewModel() {

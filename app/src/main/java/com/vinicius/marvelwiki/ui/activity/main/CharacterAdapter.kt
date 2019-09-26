@@ -21,7 +21,7 @@ class CharacterAdapter(val context: Context) :
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CharacterViewHolder {
-        val view = LayoutInflater.from(context).inflate(R.layout.item_character, parent, false)
+        val view = LayoutInflater.from(context).inflate(R.layout.card_item_data, parent, false)
         return CharacterViewHolder(view)
     }
 

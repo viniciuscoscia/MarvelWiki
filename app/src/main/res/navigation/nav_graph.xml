@@ -1,9 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph"
-        app:startDestination="@id/charactersFragment">
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/nav_graph"
+        app:startDestination="@id/charactersList">
     <fragment
-            android:id="@+id/charactersFragment"
+            android:id="@+id/charactersList"
             android:name="com.vinicius.marvelwiki.ui.fragment.characters.CharactersFragment"
-            android:label="CharactersFragment" />
+            android:label="Characters List"
+            tools:layout="@layout/fragment_characters"/>
+    <fragment
+            android:id="@+id/comicsFragment"
+            android:name="com.vinicius.marvelwiki.ui.fragment.comics.ComicsFragment"
+            android:label="ComicsFragment"
+            tools:layout="@layout/fragment_comics"/>
+    <fragment
+            android:id="@+id/creatorsFragment"
+            android:name="com.vinicius.marvelwiki.ui.fragment.creators.CreatorsFragment"
+            android:label="CreatorsFragment"
+            tools:layout="@layout/fragment_creators"/>
+    <fragment
+            android:id="@+id/eventsFragment"
+            android:name="com.vinicius.marvelwiki.ui.fragment.events.EventsFragment"
+            android:label="EventsFragment"
+            tools:layout="@layout/fragment_events"/>
+    <fragment
+            android:id="@+id/storiesFragment"
+            android:name="com.vinicius.marvelwiki.ui.fragment.stories.StoriesFragment"
+            android:label="StoriesFragment"
+            tools:layout="@layout/fragment_stories"/>
+    <fragment
+            android:id="@+id/seriesFragment"
+            android:name="com.vinicius.marvelwiki.ui.fragment.series.SeriesFragment"
+            android:label="SeriesFragment"
+            tools:layout="@layout/fragment_series"/>
 </navigation>

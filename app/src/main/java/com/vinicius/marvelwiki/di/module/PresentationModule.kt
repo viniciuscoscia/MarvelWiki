@@ -3,6 +3,7 @@ package com.vinicius.marvelwiki.di.module
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.vinicius.marvelwiki.ui.activity.main.MainActivity
+import com.vinicius.marvelwiki.ui.fragment.characters.CharactersFragment
 import com.vinicius.marvelwiki.viewModel.MainViewModel
 import com.vinicius.marvelwiki.viewModel.ViewModelFactory
 import dagger.Binds
@@ -18,13 +19,11 @@ abstract class PresentationModule {
     @ContributesAndroidInjector
     abstract fun contruibutesMainActivity(): MainActivity
 
-    @Binds
-    abstract fun bindViewModelFactory(factory: ViewModelFactory): ViewModelProvider.Factory
+    @ContributesAndroidInjector
+    abstract fun contruibutesCharactersFragment(): CharactersFragment
 
     @Binds
-    @IntoMap
-    @ViewModelKey(MainViewModel::class)
-    abstract fun bindMainViewModel(viewModel: MainViewModel): ViewModel
+    abstract fun bindViewModelFactory(factory: ViewModelFactory): ViewModelProvider.Factory
 }
 
 //Definindo a anotação do ViewModel

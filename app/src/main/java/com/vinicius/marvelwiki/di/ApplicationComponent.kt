@@ -3,6 +3,7 @@ package com.vinicius.marvelwiki.di
 import android.app.Application
 import com.vinicius.marvelwiki.commons.BaseApp
 import com.vinicius.marvelwiki.di.module.ApplicationModule
+import com.vinicius.marvelwiki.di.module.MyViewModelModule
 import com.vinicius.marvelwiki.di.module.RemoteModule
 import com.vinicius.marvelwiki.di.module.PresentationModule
 import dagger.BindsInstance
@@ -12,6 +13,7 @@ import javax.inject.Singleton
 
 @Singleton
 @Component(modules = [AndroidInjectionModule::class,
+    MyViewModelModule::class,
     ApplicationModule::class,
     PresentationModule::class,
     RemoteModule::class])

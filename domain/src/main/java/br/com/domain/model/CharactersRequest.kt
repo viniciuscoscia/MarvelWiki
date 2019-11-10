@@ -1,5 +1,7 @@
 package br.com.domain.model
 
+import java.io.Serializable
+
 class CharactersRequest (
     val code: Byte,
     val status: String,
@@ -30,7 +32,7 @@ class Character(
     val stories: Content,
     val events: Content,
     val urls: List<URL>
-)
+): Serializable
 
 class Thumbnail(
     val path: String,

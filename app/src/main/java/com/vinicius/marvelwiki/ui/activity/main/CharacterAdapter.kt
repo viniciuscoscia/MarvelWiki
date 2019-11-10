@@ -10,7 +10,8 @@ import br.com.domain.model.Character
 import com.bumptech.glide.Glide
 import com.vinicius.marvelwiki.R
 
-class CharacterAdapter(val context: Context) :
+class CharacterAdapter(val context: Context,
+                       var onClickListener: ((character: Character) -> Unit)? = null) :
     RecyclerView.Adapter<CharacterAdapter.CharacterViewHolder>() {
 
     private var characters: List<Character>? = null
@@ -42,7 +43,5 @@ class CharacterAdapter(val context: Context) :
                 .centerCrop()
                 .into(imageView)
         }
-
-
     }
 }

@@ -4,11 +4,11 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 29
     defaultConfig {
         applicationId "com.example.marvelwiki"
         minSdkVersion 21
-        targetSdkVersion 28
+        targetSdkVersion 29
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -21,6 +21,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility = "1.5"
+        targetCompatibility = "1.5"
+    }
+    buildToolsVersion = '29.0.2'
 }
 
 dependencies {
@@ -50,6 +55,7 @@ dependencies {
     // Dagger2
     implementation libs.dagger2
     implementation libs.dagger2android
+    implementation libs.dagger2androidSupport
     kapt libs.dagger2compiler
     kapt libs.dagger2androidProcessor
     annotationProcessor libs.dagger2compiler
@@ -69,5 +75,7 @@ dependencies {
     //Navigation
     implementation libs.navigationFragment
     implementation libs.navigationUi
-
+}
+repositories {
+    mavenCentral()
 }

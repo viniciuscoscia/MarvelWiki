@@ -2,13 +2,12 @@ package com.vinicius.marvelwiki.commons
 
 import android.os.Bundle
 import android.view.View
-import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.vinicius.marvelwiki.R
 import com.vinicius.marvelwiki.Utils
 
-abstract class ContainerFragment: Fragment(), ContainerFragmentContract {
+abstract class ContainerFragment : BaseFragment(), ContainerFragmentContract {
 
     var myAdapter: RecyclerView.Adapter<out RecyclerView.ViewHolder>? = null
 

@@ -5,7 +5,6 @@ import androidx.lifecycle.ViewModelProviders
 import com.vinicius.marvelwiki.R
 import com.vinicius.marvelwiki.commons.BaseActivity
 import com.vinicius.marvelwiki.viewModel.MainViewModel
-import dagger.android.AndroidInjection
 
 class MainActivity : BaseActivity() {
 

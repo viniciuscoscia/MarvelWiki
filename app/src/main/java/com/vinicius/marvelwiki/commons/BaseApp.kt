@@ -1,30 +1,29 @@
 package com.vinicius.marvelwiki.commons
 
-import android.app.Activity
-import android.app.Application
 import com.vinicius.marvelwiki.di.DaggerApplicationComponent
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
-import dagger.android.HasActivityInjector
+import dagger.android.HasAndroidInjector
+import dagger.android.support.DaggerApplication
 import javax.inject.Inject
 
-class BaseApp: Application(), HasActivityInjector {
+class BaseApp: DaggerApplication(), HasAndroidInjector {
+    override fun applicationInjector(): AndroidInjector<out DaggerApplication> {
+        return DaggerApplicationComponent.builder().build()
+    }
 
-    @Inject
-    lateinit var androidInjector: DispatchingAndroidInjector<Activity>
+    @Inject lateinit var androidInjector : DispatchingAndroidInjector<Any>
 
-    override fun activityInjector(): AndroidInjector<Activity> = androidInjector
+    override fun androidInjector(): AndroidInjector<Any> = androidInjector
 
     override fun onCreate() {
         super.onCreate()
-
         setupDagger()
     }
 
     private fun setupDagger() {
         DaggerApplicationComponent
             .builder()
-            .application(this)
             .build()
             .inject(this)
     }

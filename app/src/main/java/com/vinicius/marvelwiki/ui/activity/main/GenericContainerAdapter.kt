@@ -10,9 +10,9 @@ import br.com.domain.model.Character
 import com.bumptech.glide.Glide
 import com.vinicius.marvelwiki.R
 
-class CharacterAdapter(val context: Context,
-                       var onClickListener: ((character: Character) -> Unit)? = null) :
-    RecyclerView.Adapter<CharacterAdapter.CharacterViewHolder>() {
+class GenericContainerAdapter(val context: Context,
+                              var onClickListener: ((character: Character) -> Unit)? = null) :
+    RecyclerView.Adapter<GenericContainerAdapter.CharacterViewHolder>() {
 
     private var characters: List<Character>? = null
 

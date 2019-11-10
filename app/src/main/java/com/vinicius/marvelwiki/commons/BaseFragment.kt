@@ -1,10 +1,10 @@
 package com.vinicius.marvelwiki.commons
 
-import androidx.fragment.app.Fragment
 import com.vinicius.marvelwiki.viewModel.ViewModelFactory
+import dagger.android.support.DaggerFragment
 import javax.inject.Inject
 
-open class BaseFragment: Fragment() {
+open class BaseFragment : DaggerFragment() {
 
     @Inject
     lateinit var viewModelFactory: ViewModelFactory

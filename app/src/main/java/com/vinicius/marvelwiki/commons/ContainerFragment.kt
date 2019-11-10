@@ -6,10 +6,11 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.vinicius.marvelwiki.R
 import com.vinicius.marvelwiki.Utils
+import com.vinicius.marvelwiki.ui.activity.main.GenericContainerAdapter
 
 abstract class ContainerFragment : BaseFragment(), ContainerFragmentContract {
 
-    var myAdapter: RecyclerView.Adapter<out RecyclerView.ViewHolder>? = null
+    var myAdapter: GenericContainerAdapter? = null
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -22,8 +23,7 @@ abstract class ContainerFragment : BaseFragment(), ContainerFragmentContract {
         recyclerView?.let {
             it.adapter = myAdapter
             it.setHasFixedSize(true)
-            it.layoutManager = GridLayoutManager(
-                requireActivity(),
+            it.layoutManager = GridLayoutManager(requireActivity(),
                 Utils.calculateBestSpanCount(requireActivity().windowManager, 400)
             )
         }
@@ -31,5 +31,5 @@ abstract class ContainerFragment : BaseFragment(), ContainerFragmentContract {
 }
 
 interface ContainerFragmentContract {
-    fun setAdapter(): RecyclerView.Adapter<out RecyclerView.ViewHolder>
+    fun setAdapter(): GenericContainerAdapter
 }

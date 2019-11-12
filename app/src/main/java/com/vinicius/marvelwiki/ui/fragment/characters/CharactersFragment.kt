@@ -8,6 +8,7 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
 import com.vinicius.marvelwiki.R
 import com.vinicius.marvelwiki.commons.ContainerFragment
+import com.vinicius.marvelwiki.commons.DisposableManager
 import com.vinicius.marvelwiki.ui.activity.main.GenericContainerAdapter
 import com.vinicius.marvelwiki.ui.fragment.details.DetailsFragment
 import com.vinicius.marvelwiki.viewModel.MainViewModel
@@ -43,13 +44,20 @@ class CharactersFragment : ContainerFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel.getAllCharacters()
+
+        DisposableManager.add(viewModel.getAllCharacters()
             .subscribeOn(Schedulers.io())
             .subscribeBy(onNext = {
                 myAdapter?.setCharacters(it)
+                myAdapter?.onClickListener = { char ->
+                    findNavController().navigate(R.id.detailsFragment, Bundle().apply {
+                        putSerializable(DetailsFragment.MODEL_KEY, char)
+                    })
+                }
             }, onError = {
                 throw it
             })
+        )
     }
 
     private fun initViewModel() {

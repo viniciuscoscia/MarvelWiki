@@ -45,6 +45,7 @@ dependencies {
     androidTestImplementation libs.espresso
 
     implementation libs.recyclerView
+
     implementation libs.glide
     annotationProcessor libs.glideCompiler
 

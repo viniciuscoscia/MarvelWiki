@@ -7,9 +7,9 @@ import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
 import com.vinicius.marvelwiki.R
-import com.vinicius.marvelwiki.commons.ContainerFragment
 import com.vinicius.marvelwiki.commons.DisposableManager
 import com.vinicius.marvelwiki.ui.activity.main.GenericContainerAdapter
+import com.vinicius.marvelwiki.ui.fragment.ContainerFragment
 import com.vinicius.marvelwiki.ui.fragment.details.DetailsFragment
 import com.vinicius.marvelwiki.viewModel.MainViewModel
 import io.reactivex.rxkotlin.subscribeBy

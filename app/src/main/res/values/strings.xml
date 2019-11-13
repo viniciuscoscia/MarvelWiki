@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">MarvelWiki</string>
+    <string name="characters">Personagens</string>
+    <string name="comics">Comics</string>
+    <string name="creators">Criadores</string>
+    <string name="events">Eventos</string>
+    <string name="series">Séries</string>
+    <string name="stories">Histórias</string>
 </resources>

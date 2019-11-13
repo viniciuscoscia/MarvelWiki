@@ -1,7 +1,7 @@
 package com.vinicius.marvelwiki.ui.fragment.comics
 
-import com.vinicius.marvelwiki.commons.ContainerFragment
 import com.vinicius.marvelwiki.ui.activity.main.GenericContainerAdapter
+import com.vinicius.marvelwiki.ui.fragment.ContainerFragment
 
 class ComicsFragment: ContainerFragment() {
     override fun setAdapter(): GenericContainerAdapter{

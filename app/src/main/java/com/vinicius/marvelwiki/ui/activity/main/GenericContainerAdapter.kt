@@ -52,11 +52,14 @@ class GenericContainerAdapter(val context: Context,
 
         fun bind(character: Character) {
             char = character
-            Glide.with(context)
-                .load("${character.thumbnail.path}.${character.thumbnail.extension}")
-                .centerCrop()
-                .into(imageView)
+
+            loadImageIntoView("${character.thumbnail.path}.${character.thumbnail.extension}", imageView)
         }
 
+        private fun loadImageIntoView(imagePath: String, imageView: ImageView) {
+            Glide.with(context)
+                .load(imagePath)
+                .into(imageView)
+        }
     }
 }

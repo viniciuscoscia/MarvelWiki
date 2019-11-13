@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+            android:id="@+id/item_characters"
+            android:icon="@drawable/abc_vector_test"
+            android:title="@string/characters" />
+    <item
+            android:id="@+id/item_comics"
+            android:icon="@drawable/abc_vector_test"
+            android:title="@string/comics" />
+    <item
+            android:id="@+id/item_creators"
+            android:icon="@drawable/abc_vector_test"
+            android:title="@string/creators" />
+    <item
+            android:id="@+id/item_series"
+            android:icon="@drawable/abc_vector_test"
+            android:title="@string/series" />
+    <item
+            android:id="@+id/item_stories"
+            android:icon="@drawable/abc_vector_test"
+            android:title="@string/stories" />
+
+</menu>
